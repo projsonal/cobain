@@ -10,7 +10,7 @@ import (
 )
 
 // func TestUpdateGetData(t *testing.T) {
-// 	mconn := SetConnection("MONGOSTRING", "PakArbi")
+// 	mconn := SetConnection("MONGOSTRING", "pakarbi")
 // 	datagedung := GetAllUser(mconn, "user")
 // 	fmt.Println(datagedung)
 // }
@@ -40,12 +40,12 @@ func TestCreateNewUserRole(t *testing.T) {
 	userdata.Username = "parkir"
 	userdata.Password = "ulbi2"
 	userdata.Role = "admin"
-	mconn := SetConnection("MONGOSTRING", "PakArbi")
+	mconn := SetConnection("MONGOSTRING", "pakarbi")
 	CreateNewUserRole(mconn, "user", userdata)
 }
 
 func TestDeleteUser(t *testing.T) {
-	mconn := SetConnection("MONGOSTRING", "PakArbi")
+	mconn := SetConnection("MONGOSTRING", "pakarbi")
 	var userdata User
 	userdata.Username = "UserParkir"
 	DeleteUser(mconn, "user", userdata)
@@ -58,7 +58,7 @@ func CreateNewUserToken(t *testing.T) {
 	userdata.Role = "admin"
 
 	// Create a MongoDB connection
-	mconn := SetConnection("MONGOSTRING", "PakArbi")
+	mconn := SetConnection("MONGOSTRING", "pakarbi")
 
 	// Call the function to create a user and generate a token
 	err := CreateUserAndAddToken("your_private_key_env", mconn, "user", userdata)
@@ -140,7 +140,7 @@ func TestCreateUser(t *testing.T) {
 	userdata.Role = "admin"
 
 	// Create a MongoDB connection
-	mconn := SetConnection("MONGOSTRING", "PakArbi")
+	mconn := SetConnection("MONGOSTRING", "pakarbi")
 
 	// Call the function to create a user and generate a token
 	err := CreateUser(mconn, "user", userdata)
@@ -170,7 +170,7 @@ func TestUserFix(t *testing.T) {
 }
 
 func TestLoginn(t *testing.T) {
-	mconn := SetConnection("MONGOSTRING", "PakArbi")
+	mconn := SetConnection("MONGOSTRING", "pakarbi")
 	var userdata User
 	userdata.Username = "tes"
 	userdata.Password = "testing"
